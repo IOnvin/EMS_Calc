@@ -333,7 +333,7 @@ DR_HRS1 = 16.67
 
 DR_HRS = (
     (Blank, Blank),
-    (16.67, 16.67)
+    (DR_HRS1, DR_HRS1)
 )
 
 ZERO_ONE = (
@@ -380,9 +380,26 @@ FIREWALL = (
 )
 
 
-class QuoteInputModel(models.Model):
+class HostingProvider(models.Model):
+    name = models.CharField(max_length=40)
 
+    def __str__(self):
+        return self.name
+
+
+class Location(models.Model):
+    hostingProvider = models.ForeignKey(HostingProvider, on_delete=models.CASCADE)
+    name = models.CharField(max_length=40)
+
+    def __str__(self):
+        return self.name
+
+
+class QuoteInputModel(models.Model):
     # Inputs
+
+    hostingProvider = models.ForeignKey(HostingProvider, on_delete=models.SET_NULL, blank=False, null=True)
+    location = models.ForeignKey(Location, on_delete=models.SET_NULL, blank=False, null=True)
 
     quoteName = models.CharField(max_length=56, null=True)
     salesForceCloudOpportunityID = models.CharField(max_length=120)
@@ -412,8 +429,8 @@ class QuoteInputModel(models.Model):
     cloudMargin = models.FloatField(default=47.00)
     annualPriceAdjustment = models.FloatField(default=3.00)
     incrementalECMSHeadcountRequiredAsPartOfTheECMS = models.CharField(max_length=10, choices=BOOL_VAL, null=True)
-    CPSMonthlyHours = models.IntegerField(help_text='30hrs is the minimum, approvals required for less', null=True)
-    CDSMonthlyHours = models.IntegerField(help_text='15hrs is the minimum, approvals required for less', null=True)
+    CPSMonthlyHours = models.PositiveIntegerField (help_text='30hrs is the minimum, approvals required for less', null=True)
+    CDSMonthlyHours = models.PositiveIntegerField(help_text='15hrs is the minimum, approvals required for less', null=True)
     manualInstallationCost = models.FloatField(max_length=28, help_text='If populated, this overrides the automation '
                                                                         'of installation costs within the VM tab. Use'
                                                                         ' for Daas', null=True)
@@ -424,8 +441,6 @@ class QuoteInputModel(models.Model):
 
     # Hosting
 
-    hostingProvider = models.CharField(max_length=56, choices=CLOUD_HOSTING, null=True)
-    location = models.CharField(max_length=56, choices=LOCATION, null=True, blank=True)
     multipleActiveRegions = models.CharField(max_length=5, choices=BOOL, default='No')
     customerRequestedPrimaryDC = models.CharField(max_length=56, null=True)
     customerRequestedSecondaryOrMoreDCs = models.CharField(max_length=56, null=True)
@@ -433,12 +448,12 @@ class QuoteInputModel(models.Model):
     customerRequestedApplicationAvailabilitySLA = models.FloatField(max_length=10, choices=SLA_PERCENTAGE, null=True)
     disasterRecovery = models.CharField(max_length=56, choices=DR_OPTIONS, null=True)
     customerRequestedRTORPOSLA = models.CharField(max_length=56, choices=DR_SLA, null=True)
-    enhancedDRPlanningHrsPcm = models.FloatField(max_length=10, choices=DR_HRS, null=True)
+    enhancedDRPlanningHrsPcm = models.FloatField(max_length=50, choices=DR_HRS, null=True)
     isThisADaaSBasedCloudService = models.CharField(max_length=10, choices=BOOL, null=True)
     requiresEUDataProtectionZoneEUDPZ = models.CharField(max_length=10, choices=BOOL, null=True)
     backupNonProductionEnvironments = models.CharField(max_length=10, choices=BOOL, null=True)
-    encryptionAtRest = models.CharField(max_length=5, choices=BOOL, default=Yes)
-    numberOfSiteToSiteVPNs = models.CharField(max_length=2, choices=ZERO_ONE, null=True)
+    encryptionAtRest = models.CharField(max_length=10, choices=BOOL, null=True)
+    numberOfSiteToSiteVPNs = models.CharField(max_length=5, choices=ZERO_ONE, null=True)
     numberOfClientBasedVPNs = models.IntegerField(null=True)
     willTheCustomerUseMPLSVPLSCircuitsToConnect = models.CharField(max_length=10, choices=BOOL, null=True)
     GCPSoleTenantNodesVCPUs96RAM624GBPerSTN = models.IntegerField(null=True)
@@ -449,13 +464,13 @@ class QuoteInputModel(models.Model):
     threatManagementAndSecurityScans = models.CharField(max_length=10, choices=BOOL, null=True)
     problemEscalationAndResponse = models.CharField(max_length=10, choices=RESPONSE_TIME, null=True)
     loadBalancing = models.CharField(max_length=10, choices=BOOL, null=True)
-    firewall = models.CharField(max_length=20, choices=FIREWALL, null=True)
+    firewall = models.CharField(max_length=50, choices=FIREWALL, null=True)
     databaseAdministrationAndTuning = models.CharField(max_length=10, choices=BOOL, null=True)
     activeActiveDBRequired = models.CharField(max_length=10, choices=BOOL, null=True)
     applicationMonitoringRequiredNewRelic = models.CharField(max_length=10, choices=BOOL, null=True)
 
     def __str__(self):
-        return f"{self.quoteName}: {self.customerName}"
+        return f"{self.quoteName}: {self.customerName}: {self.name}"
 
 
 # HOSTING ##################### HOSTING ####################### HOSTING ########## HOSTING ###################

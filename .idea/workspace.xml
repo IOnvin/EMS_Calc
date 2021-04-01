@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5269d958-d6b6-4f57-bd66-9223140f3bb4" name="Default Changelist" comment="" />
+    <list default="true" id="5269d958-d6b6-4f57-bd66-9223140f3bb4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/EMSCalc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EMSCalc.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CPSCalc/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/CPSCalc/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CPSCalc/migrations/0002_drplanninglaborcostratemodel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CPSCalc/migrations/0003_auto_20200922_1338.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CPSCalc/migrations/0004_cpscostmodel_drplanninglabourcost_get.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EMSCalc/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/EMSCalc/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuoteInput/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/QuoteInput/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuoteInput/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/QuoteInput/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuoteInput/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/QuoteInput/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuoteInput/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/QuoteInput/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuoteInput/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/QuoteInput/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuoteInput/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/QuoteInput/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/QuoteInput/addquote.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/QuoteInput/addquote.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,8 +29,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1hotAUbpNxZiTgY19cBHG7ytm3o" />
   <component name="ProjectViewState">
@@ -21,8 +43,44 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vbolisetti\Documents\PL_tool_4\EMS_Calc\EMSCalc\QuoteInput\templates" />
+      <recent name="C:\Users\vbolisetti\Documents\PL_tool_4\EMS_Calc\EMSCalc\templates\QuoteInput" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="apps" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="EMSCalc" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CPSCalc" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CPSCalc/apps.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.apps" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -50,22 +108,54 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1600758114924">
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614841444871">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1600758114924" />
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1601297275865">
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1614841444871" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1617176704130">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1601297275865" />
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1600864008360" />
-    <state x="147" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600755111372">
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1617176704130" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1616843557845" />
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1617173522009">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="147" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1600755111372" />
-    <state x="379" y="101" width="607" height="526" key="find.popup" timestamp="1600771511089">
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1617173522009" />
+    <state width="1345" height="179" key="GridCell.Tab.0.center" timestamp="1617173522009">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="101" width="607" height="526" key="find.popup/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1600771511089" />
+    <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1617173522009" />
+    <state width="1345" height="179" key="GridCell.Tab.0.left" timestamp="1617173522009">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1617173522009" />
+    <state width="1345" height="179" key="GridCell.Tab.0.right" timestamp="1617173522009">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1617173522009" />
+    <state x="184" y="6" key="SettingsEditor" timestamp="1617176633698">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1617176633698" />
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1616843540432">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1616753540484" />
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1616843540432" />
+    <state x="379" y="101" width="607" height="526" key="find.popup" timestamp="1617205327147">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="101" width="607" height="526" key="find.popup/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1617205327147" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/EMSCalc/wsgi.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

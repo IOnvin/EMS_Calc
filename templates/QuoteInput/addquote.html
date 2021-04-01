@@ -79,7 +79,6 @@
                 <div class="x_panel">
                   <div class="x_title">
                     <h2> New Quote </h2>
-                    </ul>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
@@ -108,7 +107,7 @@
               <div class="x_content">
                 <br />
                                 <!-- Form starts here-->
-                <form action="#" class="form-horizontal form-label-left" method='POST'> {% csrf_token %}
+                <form action="#" id="quoteinput" data-location-url="{% url 'ajax_load_location' %}" class="form-horizontal form-label-left" method='POST'> {% csrf_token %}
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Quote Name</label>
                         <div class="col-sm-4">
@@ -397,7 +396,6 @@
 
 </div>
     </section></div></div></body>
-
 
 
 {% endblock %}

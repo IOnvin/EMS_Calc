@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 {% load static %}
@@ -195,6 +196,7 @@
 
 
 {% block content %}
+
 {% endblock %}
 
   <!-- /.content-wrapper -->
@@ -248,10 +250,38 @@
 <script src="{% static 'dist/js/pages/dashboard.js' %}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{% static 'dist/js/demo.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script>
+    $("#id_hostingProvider").change(function () {
+        const url = $("#quoteinput").attr("data-location-url");
+        const hostingProviderId = $(this).val();
+
+        $.ajax({
+            url: url,
+            data: {
+                'hostingProvider_id': hostingProviderId
+            },
+            success: function (data) {
+                $("#id_location").html(data);
+
+                let html_data = '<option value="">---------</option>';
+                data.forEach(function (location) {
+                    html_data += `<option value="${location.id}">${location.name}</option>`
+                });
+                console.log(html_data);
+                $("#id_location").html(html_data);
+
+            }
+        });
+
+    });
+</script>
+
 
 
     <!-- Location -->
-    <script>
+    <!--<script>
 
         $(document).ready(function(){
 
@@ -432,11 +462,11 @@
             });
 
         });
-    </script>
+    </script>-->
     <!-- End of Location -->
 
     <!-- Mutliple active regions? -->
-    <script>
+    <!--<script>
         $(document).ready(function(){
 
             $('#id_multipleActiveRegions').empty();
@@ -478,13 +508,13 @@
             });
 
         });
-    </script>
+    </script>-->
     <!-- End of Mutliple active regions? -->
 
    <!-- Disaster Recovery? --> <!-- Disaster Recovery? --> <!-- Disaster Recovery? -->
 
     <!-- Location for OpenText US EMEA JAPAN -->
-    <script>
+    <!--<script>
         $(document).ready(function(){
 
             $('#id_disasterRecovery').empty();
@@ -828,10 +858,11 @@
             });
 
         });
-    </script>
+    </script>-->
     <!-- End of Location for OpenText US EMEA JAPAN -->
 
-    <script>
+    <!-- enhanced DR Planning hrs pcm -->
+    <!-- <script>
         $(document).ready(function(){
 
             $('#id_enhancedDRPlanningHrsPcm').empty();
@@ -873,9 +904,9 @@
             });
 
         });
-    </script>
+    </script> -->
 
-    <script>
+    <!--<script>
         $(document).ready(function(){
 
             $('#id_customerRequestedRTORPOSLA').empty();
@@ -963,9 +994,10 @@
             });
 
         });
-    </script>
+    </script>-->
 
-    <script>
+    <!-- encryptionAtRest -->
+    <!-- <script>
         $(document).ready(function(){
 
             $('#id_encryptionAtRest').empty();
@@ -1007,9 +1039,10 @@
             });
 
         });
-    </script>
+    </script>  -->
 
-    <script>
+    <!-- Number of site-to-site VPNs -->
+   <!-- <script>
         $(document).ready(function(){
 
             $('#id_numberOfSiteToSiteVPNs').empty();
@@ -1051,7 +1084,7 @@
             });
 
         });
-    </script>
+    </script> -->
 
 </body>
 </html>

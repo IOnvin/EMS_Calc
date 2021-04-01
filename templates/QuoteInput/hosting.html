@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load widget_tweaks %}
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+
+<form method="post" >
+    {% csrf_token %}
+    <label class="col-sm-2 col-form-label">Hosting Provider</label>
+    <div class="col-sm-4">
+        {% render_field form2.hostingProvider %}<br></div>
+    <label class="col-sm-2 col-form-label">Location</label>
+    <div class="col-sm-4">
+        {% render_field form2.location %}<br></div>
+    <input type="submit" value="Submit">
+</form>
+
+      </div></section></div></div>
+</body>
+
+{% endblock %}

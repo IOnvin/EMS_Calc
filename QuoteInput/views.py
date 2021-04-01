@@ -1,5 +1,6 @@
-from django.shortcuts import render, redirect
-from .models import QuoteInputModel
+from django.http import JsonResponse
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import QuoteInputModel, Location
 from .forms import QuoteInputForm
 
 # Hosting Imports
@@ -13,24 +14,27 @@ from .models import get_ot_strings, get_cu_strings, get_aw_strings, \
 import json
 
 
-def index(request):
-    return render(request, 'QuoteInput/index.html')
-
-
 def QuoteInputView(request):
-    context = {}
-
-    objects = QuoteInputModel.objects.all()
-
     form = QuoteInputForm(request.POST or None)
-    context['form'] = form
 
     if request.method == 'POST':
         form = QuoteInputForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('/')
+        return redirect('addquote')
+    objects = QuoteInputModel.objects.all()
 
+    return render(request, 'QuoteInput/addquote.html', {'objects': objects, 'form': form})
+
+
+def load_location(request):
+    hostingProvider_id = request.GET.get('hostingProvider_id')
+    locations = Location.objects.filter(hostingProvider_id=hostingProvider_id).all()
+    # return render(request, 'QuoteInput/addquote.html', {'locations': locations})
+    return JsonResponse(list(locations.values('id', 'name')), safe=False)
+
+
+'''
     ot_strings = get_ot_strings()
     au_strings = get_au_strings()
     az_strings = get_az_strings()
@@ -136,5 +140,4 @@ def QuoteInputView(request):
     s2svpns_strings = get_s2svpns_strings()
     json_s2svpns_strings = json.dumps(s2svpns_strings)
     context['json_s2svpns_strings'] = json_s2svpns_strings
-
-    return render(request, 'QuoteInput/addquote.html', context, {'objects': objects})
+    '''
