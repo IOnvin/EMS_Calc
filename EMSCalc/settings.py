@@ -24,7 +24,7 @@ SECRET_KEY = 'ajgey43j#u45)k47e&jl376diz-^lg1k&u(urfh=+sm)&@1uzi'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['ems-plcalc.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
@@ -80,6 +80,18 @@ WSGI_APPLICATION = 'EMSCalc.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd70kdng0kkoatl',
+        'HOST': 'ec2-52-45-73-150.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'jnnsjcnxzzkjfh',
+        'PASSWORD': '2ae7d6910c327ce203f3d5e36434ae40b69142f844284c42ad3ee50d7a149a8b',
+    }
+}
+
+
+'''DATABASES = {
+    'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'db_emscalcpl',
         'USER': 'root',
@@ -87,7 +99,7 @@ DATABASES = {
         'HOST': 'localhost',
         'ROOT': '3306',
     }
-}
+}'''
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
@@ -129,6 +141,6 @@ STATICFILES_DIRS = [
     'PL_tool_4/EMS_Calc/EMSCalc/static',
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles"),
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 # workon vin2
