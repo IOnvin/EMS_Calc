@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5269d958-d6b6-4f57-bd66-9223140f3bb4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/EMSCalc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EMSCalc.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CPSCalc/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/CPSCalc/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CPSCalc/migrations/0002_drplanninglaborcostratemodel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CPSCalc/migrations/0003_auto_20200922_1338.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CPSCalc/migrations/0004_cpscostmodel_drplanninglabourcost_get.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/EMSCalc/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/EMSCalc/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuoteInput/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/QuoteInput/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuoteInput/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/QuoteInput/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuoteInput/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/QuoteInput/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuoteInput/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/QuoteInput/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuoteInput/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/QuoteInput/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuoteInput/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/QuoteInput/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/QuoteInput/addquote.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/QuoteInput/addquote.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

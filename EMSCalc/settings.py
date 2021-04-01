@@ -129,4 +129,6 @@ STATICFILES_DIRS = [
     'PL_tool_4/EMS_Calc/EMSCalc/static',
 ]
 
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles"),
+
 # workon vin2
